@@ -1,0 +1,11 @@
+find -centres -      price(sys),location,centre_name,health_issue,rating,attraction
+essentials -         centre-name
+review-              centre-name
+info-                centre-name
+attraction-          centre-name
+
+////
+
+suggest-action       health-issue
+
+ 
