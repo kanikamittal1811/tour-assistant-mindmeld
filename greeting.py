@@ -22,3 +22,27 @@ def welcome(request, responder):
 @app.handle(intent='exit')
 def say_goodbye(request, responder):
     responder.reply(['Bye', 'Goodbye', 'Have a nice day.','peace out'])
+
+@app.handle(intent='help')
+def provide_help(request, responder):
+    """
+    When the user asks for help, provide some sample queries they can try.
+    """
+    # Respond with examples demonstrating how the user can order food from different restaurants.
+    # For simplicity, we have a fixed set of demonstrative queries here, but they could also be
+    # randomly sampled from a pool of example queries each time.
+    replies = ["I can help you find a place that brings out the best version of yourself "
+               "Try something like 'Tell me the best place where i can learn to overcome my fears'"]
+    responder.reply(replies)
+
+
+@app.handle(intent='start_over')
+def start_over(request, responder):
+    """
+    When the user wants to start over, clear the dialogue frame and reply for the next request.
+    """
+    # Clear the dialogue frame and respond with a variation of the welcome message.
+    responder.frame = {}
+    replies = ["Ok, let's start over! how can i help you?"]
+    responder.reply(replies)
+    responder.listen()
