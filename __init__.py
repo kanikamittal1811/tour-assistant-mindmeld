@@ -15,7 +15,7 @@ def default(request, responder):
     When the user asks an unrelated question, convey the lack of understanding for the requested
     information and prompt to return to food ordering.
     """
-    replies = ["Sorry, not sure what you meant there. I can help you find a place the best version of yourself "
+    replies = ["Sorry, not sure what you meant there. I can help you find the place that brings out the best version of yourself "
                "Try something like 'Tell me the best place where i can learn to overcome my fears'"]
     responder.reply(replies)
 
@@ -40,5 +40,36 @@ def welcome(request, responder):
 
 @app.handle(intent='exit')
 def say_goodbye(request, responder):
-    responder.reply(['Bye', 'Goodbye', 'Have a nice day.','peace out'])
+    """
+    When the user ends a conversation, clear the dialogue frame and say goodbye.
+    """
+    # Clear the dialogue frame to start afresh for the next user request.
+    responder.frame = {}
+
+    # Respond with a random selection from one of the canned "goodbye" responses.
+    responder.reply(['Bye!', 'Goodbye!', 'Have a nice day.', 'See you later.'])
+
+@app.handle(intent='help')
+def provide_help(request, responder):
+    """
+    When the user asks for help, provide some sample queries they can try.
+    """
+    # Respond with examples demonstrating how the user can order food from different restaurants.
+    # For simplicity, we have a fixed set of demonstrative queries here, but they could also be
+    # randomly sampled from a pool of example queries each time.
+    replies = ["I can help you find a place that brings out the best version of yourself "
+               "Try something like 'Tell me the best place where i can learn to overcome my fears'"]
+    responder.reply(replies)
+
+
+@app.handle(intent='start_over')
+def start_over(request, responder):
+    """
+    When the user wants to start over, clear the dialogue frame and reply for the next request.
+    """
+    # Clear the dialogue frame and respond with a variation of the welcome message.
+    responder.frame = {}
+    replies = ["Ok, let's start over! how can i help you?"]
+    responder.reply(replies)
+    responder.listen()
 
