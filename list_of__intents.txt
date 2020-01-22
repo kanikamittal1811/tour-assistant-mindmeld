@@ -7,5 +7,3 @@ attraction-          centre-name
 ////
 
 suggest-action       health-issue
-
- 
