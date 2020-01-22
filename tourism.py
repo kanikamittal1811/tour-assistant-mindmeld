@@ -2,7 +2,7 @@ from .root import app
 
 #Here we have to make changes for toursism intents
 
-@app.dialogue_flow(intent='info') #can add domain in this
+@app.dialogue_flow(domain='tour_info',intent='info') #can add domain in this
 def send_center_info(request, responder):
     active_center = None
     center_entity = next((e for e in request.entities if e['type'] == 'center_name'), None)
@@ -22,7 +22,7 @@ def send_center_info(request, responder):
 
     if active_center:
         responder.slots['center_name'] = active_center['center_name']
-        responder.slots['info'] = active_center['info']
+        responder.slots['info'] = active_center['description']
         return
 
     responder.frame['count'] = responder.frame.get('count', 0) + 1
