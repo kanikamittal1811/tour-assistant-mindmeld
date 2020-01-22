@@ -1,13 +1,8 @@
+from tour_assistant.root import app
 
-# -*- coding: utf-8 -*-
-"""This module contains a template MindMeld application"""
-from mindmeld import Application
-
-app = Application(__name__)
+import tour_assistant.greeting
 
 __all__ = ['app']
-
-
 @app.handle(default=True)
 @app.handle(intent='unsupported')
 def default(request, responder):
