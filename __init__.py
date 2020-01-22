@@ -1,13 +1,5 @@
-# -*- coding: utf-8 -*-
-"""This module contains a template MindMeld application"""
-from mindmeld import Application
+from tour_assistant.root import app
 
-app = Application(__name__)
+import tour_assistant.greeting
 
 __all__ = ['app']
-
-
-@app.handle(default=True)
-def default(request, responder):
-    """This is a default handler."""
-    responder.reply('Hello there!')
