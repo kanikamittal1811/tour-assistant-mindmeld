@@ -1,11 +1,6 @@
-# -*- coding: utf-8 -*-
-"""This module contains a template MindMeld app configuration"""
-
 # The namespace of the application. Used to prevent collisions in supporting services across
 # applications. If not set here, the app's enclosing directory name is used.
 # APP_NAMESPACE = 'app-name'
-
-# Dictionaries for the various NLP classifier configurations
 
 # An example decision tree model for intent classification
 INTENT_CLASSIFIER_CONFIG = {
@@ -25,9 +20,38 @@ INTENT_CLASSIFIER_CONFIG = {
     }
 }
 
+DOMAIN_CLASSIFIER_CONFIG = {
+    'model_type': 'text',
+    'model_settings': {
+        'classifier_type': 'logreg'
+    },
+    'param_selection': {
+        'type': 'k-fold',
+        'k': 10,
+        'grid': {
+            'fit_intercept': [True, False],
+            'C': [10, 100, 1000, 10000, 100000]
+        },
+    },
+    'features': {
+        "bag-of-words": {
+            "lengths": [1, 2]
+        },
+        "edge-ngrams": {"lengths": [1, 2]},
+        "in-gaz": {},
+        "exact": {"scaling": 10},
+        "gaz-freq": {},
+        "freq": {"bins": 5}
+    }
+}
+
+
+
+
+
+
 """
 # Fill in the other model configurations if necessary
-# DOMAIN_CLASSIFIER_CONFIG = {}
 # ENTITY_RECOGNIZER_CONFIG = {}
 # ROLE_CLASSIFIER_CONFIG = {}
 """
