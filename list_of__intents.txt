@@ -1,4 +1,4 @@
-find -centres -      price(sys),location,centre_name,health_issue,rating,attraction
+find -centres -      price(sys),location,centre_name,health_issue,sys_number,attraction
 essentials -         centre-name
 review-              centre-name
 info-                centre-name
