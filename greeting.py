@@ -1,16 +1,5 @@
 from .root import app
 
-@app.handle(default=True)
-@app.handle(intent='unsupported')
-def default(request, responder):
-    """
-    When the user asks an unrelated question, convey the lack of understanding for the requested
-    information and prompt to return to tour assistant.
-    """
-    replies = ["Sorry, not sure what you meant there. I can help you find a place the best version of yourself "
-               "Try something like 'Tell me the best place where i can learn to overcome my fears'"]
-    responder.reply(replies)
-
 @app.handle(intent='greet')
 def welcome(request, responder):
     """
