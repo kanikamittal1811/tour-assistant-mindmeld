@@ -1,0 +1,28 @@
+[
+    {
+        "center_name": "Ayurvedagram Heritage Wellness Center",
+        "description": ["Ayurvedagram Heritage Wellness Center is one India’s recognized wellness centers.","Spread in the 9 acres of land, this Ayurvedic healthcare spa renders a gentle touch through Ayurvedic remedies, Yoga, Pranayama, and a vegetarian Ayurvedic diet for their believers."],
+        "programs":
+            [
+                {
+                    "program_name":"xyz",
+                    "duration": 1,
+                    "duration_units": "hours",
+                    "price": 1234,
+                    "desc": ["d1","d2"]
+                },
+                {
+                    "program_name":"xyz",
+                    "duration": 10,
+                    "duration_units": "days",
+                    "price": 1234,
+                    "desc": ["d1","d2"]
+                }
+            ],
+        "reviews": ["r1","r2","r3"],
+        "location":	"Ayurvedagram Heritage Wellness Centre, Hemandanahalli, Samethanahalli Post Whitefield, Bangalore -560067 Karnataka, India",
+        "rating": 5,
+        "website": "https://www.ayurvedagram.com/",
+        "attractions": ["mall","swimming pool","arcade"]
+    }
+]
