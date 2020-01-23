@@ -1,9 +1,9 @@
-what all places are near to it?
-places to visit near it?
-where can i go near ?
-what all places can i visit near ?
-can i see something nearby?
-things i can see nearby?
-things to do?
-attractions nearby?
-where can i go for a moring walk?
+what all places are near to {shreyas yoga retreat|center_name}?
+places to visit near {Vana Malsi Estate|center_name}?
+where can i go near {SwaSwara|center_name}?
+what all places can i visit near {AyurYoga Eco Ashram|center_name} ?
+can i see something nearby {Ayurvedagram|center_name}?
+things i can see nearby {Indus Valley Ayurvedic Center|center_name}?
+things to do in {Ayurvedagram|center_name}?
+attractions nearby {SwaSwara|center_name}?
+where can i go for a moring walk near {shreya yoga retreat|center_name}?
